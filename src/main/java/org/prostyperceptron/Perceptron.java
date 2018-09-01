@@ -89,6 +89,10 @@ public class Perceptron {
          * and 1 if the specified value is positive.)
          */
         result = signum(result);
+        
+        // TODO Derivative function
+        
+        
         return result;
     }
     
