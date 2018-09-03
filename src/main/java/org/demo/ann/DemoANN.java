@@ -34,6 +34,8 @@ public class DemoANN {
         perceptron = new Perceptron();
         
         // weights
+        // TODO fit the inputs number with weight inputs
+        
         int[] inputWeights = new int[3];
         inputWeights[0] = -1;
         inputWeights[1] = 0;
