@@ -17,7 +17,10 @@
 package org.prostyperceptron;
 
 /**
- *
+ * Groups neutrons into a layer.
+ * 
+ * TODO Gather outputs and use it recursivelly as input to 
+ * next layer.
  * @author Damian Duda <damian.duda@gmail.com>
  */
 public class PerceptronLayer {

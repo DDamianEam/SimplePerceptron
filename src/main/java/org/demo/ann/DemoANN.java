@@ -18,7 +18,9 @@ package org.demo.ann;
 import org.prostyperceptron.Perceptron;
 
 /**
- *
+ * Program demonstracyjny na potrzeby implementacji perceptronu.
+ * 
+ * TODO logowanie JUL lub Log4J
  * @author Damian Duda <damian.duda@gmail.com>
  */
 public class DemoANN {

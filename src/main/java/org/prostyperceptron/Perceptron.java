@@ -42,6 +42,7 @@ public class Perceptron {
 
     // konstruktor ma zasięg pakietowy
     // musi być publiczny żeby był dosięgalny z innego pakietu
+    // TODO funkcję aktywacji wstrzykiwać przez konstruktor można
     public Perceptron(){ 
         numInputs = 1;
         inputWeights = new int[1];
@@ -79,6 +80,8 @@ public class Perceptron {
         
         for (int i=0; i < numInputs; i++){
            result += inputWeights[i] * inputData[i];
+            System.out.println("input weight " + i + ": " + inputWeights[i]);
+            System.out.println("input data " + i + ": " + inputData[i]);
         }
         
         /*
