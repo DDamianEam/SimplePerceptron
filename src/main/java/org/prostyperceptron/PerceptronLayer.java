@@ -25,17 +25,34 @@ package org.prostyperceptron;
  */
 public class PerceptronLayer {
     
-   private int numPerceptrons;
-   
+   // How many neurons in layer?
+    private int numNeurons;
+   // keep neurons in the table, initiate in constructor
+    private SingleNeuron layer[];
+      
+    
    //TODO Layer
    // Perceptron perceptronLayer[];
-    
-   PerceptronLayer(){
-       numPerceptrons = 1;
+   
+    // Default constructor takes default neuron - input buffer
+    // with one input and one output
+    PerceptronLayer(){
+       this.numNeurons = 1;
+       layer[0] = new SingleNeuron();
+   }
+   
+     // Construct the N-neuron input layer if weights are not specified
+    PerceptronLayer(int N){
+       this.numNeurons = N;
+       
+       for(int i=0; i< this.numNeurons; i++){
+           layer[i] = new SingleNeuron();
+       }
+       
    }
    
    int getNumPerceptrons(){
-       return numPerceptrons;
+       return numNeurons;
    }
 }
 
