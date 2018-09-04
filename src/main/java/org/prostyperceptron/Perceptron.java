@@ -50,7 +50,7 @@ public class Perceptron {
         inputWeights[0] = 1;
     }
     
-    Perceptron(int numInputs){ 
+    public Perceptron(int numInputs){ 
         this.numInputs = numInputs;
         this.inputWeights = new int[numInputs];
         // Default is to be input buffer/layer
@@ -60,7 +60,7 @@ public class Perceptron {
     }
     
     // Perceptron constructor with defined weights
-    Perceptron(int numInputs, int[] inputWeights){
+    public Perceptron(int numInputs, int[] inputWeights){
         this.numInputs = numInputs;
         // yes, we can do this, this is not C!
         // we do not loose reference outside of scope
