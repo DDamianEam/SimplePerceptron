@@ -52,10 +52,10 @@ public class Perceptron {
     
     Perceptron(int numInputs){ 
         this.numInputs = numInputs;
-        inputWeights = new int[numInputs];
+        this.inputWeights = new int[numInputs];
         // Default is to be input buffer/layer
-        for (int i=0; i<numInputs; i++)
-            inputWeights[i] = 1;
+        for (int i=0; i<this.numInputs; i++)
+            this.inputWeights[i] = 1;
         
     }
     

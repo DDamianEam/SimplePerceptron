@@ -45,7 +45,24 @@ public class DemoANN {
         System.out.println("numInputs: " + perceptron.getNumInputs() );
         System.out.println("stimulate: " + perceptron.stimulate(inputWeights));
         
+         // Create input layer        
+        Perceptron inputPerceptron = new Perceptron(2);
         
+        System.out.println("Input Perceptron");
+        System.out.println("Inputs: " + inputPerceptron.getNumInputs());
+        for(int number: inputPerceptron.getInputWeights()){
+            System.out.println("Weight: " + number);
+        }
+        
+        // Create first layer
+        int hiddenInputs[] = new int[5];
+        Perceptron hiddenPerceptron = new Perceptron(5, hiddenInputs);
+        System.out.println("Hidden Perceptron");
+        System.out.println("Inputs: " + hiddenPerceptron.getNumInputs());
+        for (int i=0; i<hiddenPerceptron.getNumInputs(); i++){
+            System.out.println("weight[" + i + "]= " 
+                    + hiddenPerceptron.getInputWeights()[i]);
+        }
         
     }
     
