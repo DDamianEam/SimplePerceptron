@@ -71,6 +71,10 @@ public class Perceptron {
         return numInputs;
     }
 
+    public int[] getInputWeights(){
+        return this.inputWeights;
+    }
+    
     public int stimulate(int[] inputData ){
         
         // call activation function
