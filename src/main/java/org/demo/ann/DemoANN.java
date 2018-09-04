@@ -15,7 +15,7 @@
  */
 package org.demo.ann;
 
-import org.prostyperceptron.Perceptron;
+import org.prostyperceptron.SingleNeuron;
 
 /**
  * Program demonstracyjny na potrzeby implementacji perceptronu.
@@ -27,11 +27,11 @@ public class DemoANN {
     
     public static void main(String[] args){
         
-        Perceptron perceptron;
+        SingleNeuron neuron;
         
         // konstruktor ma zasięg pakietowy
         // musi być publiczny żeby był dosięgalny z innego pakietu
-        perceptron = new Perceptron();
+        neuron = new SingleNeuron();
         
         // weights
         // TODO fit the inputs number with weight inputs
@@ -42,11 +42,11 @@ public class DemoANN {
         inputWeights[2] = 1;
         
         System.out.println("Perceptron:");
-        System.out.println("numInputs: " + perceptron.getNumInputs() );
-        System.out.println("stimulate: " + perceptron.stimulate(inputWeights));
+        System.out.println("numInputs: " + neuron.getNumInputs() );
+        System.out.println("stimulate: " + neuron.stimulate(inputWeights));
         
          // Create input layer        
-        Perceptron inputPerceptron = new Perceptron(2);
+        SingleNeuron inputPerceptron = new SingleNeuron(2);
         
         System.out.println("Input Perceptron");
         System.out.println("Inputs: " + inputPerceptron.getNumInputs());
@@ -56,7 +56,7 @@ public class DemoANN {
         
         // Create first layer
         int hiddenInputs[] = new int[5];
-        Perceptron hiddenPerceptron = new Perceptron(5, hiddenInputs);
+        SingleNeuron hiddenPerceptron = new SingleNeuron(5, hiddenInputs);
         System.out.println("Hidden Perceptron");
         System.out.println("Inputs: " + hiddenPerceptron.getNumInputs());
         for (int i=0; i<hiddenPerceptron.getNumInputs(); i++){

@@ -35,22 +35,25 @@ import static java.lang.Integer.signum;
  * 
  * @author dudadam1
  */
-public class Perceptron {
+public class SingleNeuron {
     
-    private int numInputs;
+    private final int numInputs;
+    // wagi mogą się zmieniać, więc nie final
     private int inputWeights[];
 
     // konstruktor ma zasięg pakietowy
     // musi być publiczny żeby był dosięgalny z innego pakietu
     // TODO funkcję aktywacji wstrzykiwać przez konstruktor można
-    public Perceptron(){ 
-        numInputs = 1;
-        inputWeights = new int[1];
+    
+    
+    public SingleNeuron(){ 
+        this.numInputs = 1;
+        this.inputWeights = new int[1];
         // Default is to be input buffer/layer
-        inputWeights[0] = 1;
+        this.inputWeights[0] = 1;
     }
     
-    public Perceptron(int numInputs){ 
+    public SingleNeuron(int numInputs){ 
         this.numInputs = numInputs;
         this.inputWeights = new int[numInputs];
         // Default is to be input buffer/layer
@@ -59,8 +62,8 @@ public class Perceptron {
         
     }
     
-    // Perceptron constructor with defined weights
-    public Perceptron(int numInputs, int[] inputWeights){
+    // SingleNeuron constructor with defined weights
+    public SingleNeuron(int numInputs, int[] inputWeights){
         this.numInputs = numInputs;
         // yes, we can do this, this is not C!
         // we do not loose reference outside of scope
